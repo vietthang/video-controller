@@ -1,25 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%">
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Video Controller</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
-    <style>
-      .fullscreen {
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
-      #phase1 {
-        z-index: 1;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link ref="stylesheet" href="./landing-page.min.css" />
   </head>
   <body style="margin: 0; width: 100%; height: 100%;">
-    <div id="phase1" class="fullscreen">
+    <div class="container-fluid" style="height: 100%">
+      <div class="row align-items-center" style="height: 100%;">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-10">
+          <form id="setup-form">
+            <div class="container">
+              <div class="row form-group">
+                <div class="col-md-12 mb-3">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="input-video"
+                  />
+                  <label class="custom-file-label" for="input-video"
+                    >Choose file</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-3 ml-0 mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">X</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="input-x"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 ml-0 mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Y</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="input-y"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 ml-0 mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">W</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="input-w"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3 ml-0 mb-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">H</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="input-h"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-md-12 mb-3">
+                <input type="submit" class="btn btn-primary" value="Play" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-1">&nbsp;</div>
+      </div>
+    </div>
+
+    <!-- <div id="phase1" class="fullscreen">
       <button id="select-video-input">Open File</button>
     </div>
-    <div id="phase2" class="fullscreen"></div>
+    <div id="phase2" class="fullscreen"></div> -->
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>

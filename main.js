@@ -17,10 +17,8 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
       nodeIntegration: true
     }
-    // frame: false
   });
 
   // electron.dialog.showOpenDialog({
@@ -34,7 +32,7 @@ function createWindow() {
   mainWindow.loadFile("index.html");
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on("closed", function() {
@@ -43,15 +41,6 @@ function createWindow() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
-
-  // mainWindow.setBounds({
-  //   x: 0,
-  //   y: 0,
-  //   width: 2560 * 2,
-  //   height: 1440
-  // });
-
-  mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished

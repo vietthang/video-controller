@@ -21,5 +21,11 @@
   },
   "dependencies": {
     "@types/electron": "^1.6.10"
+  },
+  "build": {
+    "appId": "vn.focal",
+    "mac": {
+      "category": "example"
+    }
   }
 }
